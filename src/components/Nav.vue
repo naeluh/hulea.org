@@ -29,7 +29,6 @@ export default {
       }
     }
   },
-  computed: {},
   methods: {
     toggleClass () {
       this.data.isActive = !this.data.isActive
