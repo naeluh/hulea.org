@@ -3,6 +3,9 @@ const path = require('path')
 const config = require('../config')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
+const bourbon = require('node-bourbon').includePaths
+const neat = require('node-neat').includePaths
+
 exports.assetsPath = function (_path) {
   const assetsSubDirectory = process.env.NODE_ENV === 'production'
     ? config.build.assetsSubDirectory
@@ -45,13 +48,17 @@ exports.cssLoaders = function (options) {
     }
   }
 
+  const sassOptions = {
+    includePaths: [bourbon, neat]
+  }
+
   // https://vue-loader.vuejs.org/en/configurations/extract-css.html
   return {
     css: generateLoaders(),
     postcss: generateLoaders(),
     less: generateLoaders('less'),
-    sass: generateLoaders('sass', { indentedSyntax: true }),
-    scss: generateLoaders('sass'),
+    sass: generateLoaders('sass', Object.assign({ indentedSyntax: true }, sassOptions)),
+    scss: generateLoaders('sass', sassOptions),
     stylus: generateLoaders('stylus'),
     styl: generateLoaders('stylus')
   }
