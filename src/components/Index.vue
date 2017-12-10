@@ -31,59 +31,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "bourbon";
-@import "neat";
 
-* {
-  box-sizing:border-box;
-}
-
-.container {
-    @include grid-container;
-    article{
-    position: relative;
-    height: 100vh;
-    width: 100vw;
-    section{
-      width: 89%;
-      height: 20%;
-      margin: auto;
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-        h1{
-          border: 12px solid;
-          padding: 48px;
-          padding: 40px 0;
-          font-weight: 900;
-          font-size: 545%;
-          text-align: center;
-          width: 100%;
-        }
-      }
-    }
-}
 </style>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
-}
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
 </style>

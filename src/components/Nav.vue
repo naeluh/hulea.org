@@ -1,8 +1,10 @@
 <template>
     <div v-bind:class="{ 'hide-overlay': this.data.isActive }">
       <nav>
-          <ul>
-            <li v-on:click="toggleClass()" class="list one"></li>
+          <ul v-on:click="toggleClass()">
+            <li class="list one"></li>
+            <li class="list one"></li>
+            <li class="list one"></li>
           </ul>
       </nav>
       <div class="overlay">
@@ -38,8 +40,4 @@ export default {
 </script>
 
 
-<style lang="scss" scoped>
-* {
-  font-family: 'Inconsolata', monospace;
-}
-</style>
+<style lang="scss" scoped></style>

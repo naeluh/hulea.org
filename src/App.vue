@@ -14,6 +14,4 @@ export default {
 <style>
 </style>
 
-<style lang="scss">
-@import "./assets/scss/main";
-</style>
+<style lang="scss"></style>
