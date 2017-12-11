@@ -2,6 +2,7 @@
   <div id="app">
   	<Nav/>
     <router-view/>
+    <Footer/>
   </div>
 </template>
 
@@ -14,4 +15,6 @@ export default {
 <style>
 </style>
 
-<style lang="scss"></style>
+<style lang="scss">
+	
+</style>
