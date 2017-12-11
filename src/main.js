@@ -7,12 +7,22 @@ import 'vue-awesome/icons'
 import Icon from 'vue-awesome/components/Icon'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
+import runtime from 'offline-plugin/runtime'
+runtime.install({
+  onUpdateReady () {
+    console.log('update ready')
+    runtime.applyUpdate()
+  },
+  onUpdated () {
+    console.log('updated')
+    location.reload()
+  }
+})
 Vue.component('icon', Icon)
 Vue.component('Nav', Nav)
 Vue.component('Footer', Footer)
 Vue.config.productionTip = false
 require('./assets/scss/main.scss')
-
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

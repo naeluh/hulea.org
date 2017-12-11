@@ -9,6 +9,8 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
+const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
+const OfflinePlugin = require('offline-plugin');
 
 const env = process.env.NODE_ENV === 'testing'
   ? require('../config/test.env')
@@ -90,6 +92,22 @@ const webpackConfig = merge(baseWebpackConfig, {
     new webpack.optimize.CommonsChunkPlugin({
       name: 'manifest',
       chunks: ['vendor']
+    }),
+    new OfflinePlugin({
+      relativePaths: false,
+      AppCache: false,
+      excludes: ['_redirects'],
+      ServiceWorker: {
+        events: true
+      },
+      cacheMaps: [
+        {
+          match: /.*/,
+          to: '/',
+          requestTypes: ['navigate']
+        }
+      ],
+      publicPath: '/'
     }),
     // copy custom static assets
     new CopyWebpackPlugin([

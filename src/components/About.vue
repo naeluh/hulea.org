@@ -4,12 +4,12 @@
     <article>
       <section>
          <figure>
-          <img src="http://placekitten.com/g/1024/500"/>
+          <img src="https://placekitten.com/g/1024/500"/>
         </figure> 
         <h2>Jack Bangerter</h2>
         <p>Turkey chicken pancetta sirloin spare ribs pig, beef ribs drumstick biltong tri-tip jerky pork loin. Spare ribs brisket buffalo tenderloin flank pancetta kielbasa, frankfurter alcatra boudin turducken. Corned beef ground round bresaola pastrami, pork ribeye capicola bacon kielbasa.</p>
         <figure>
-          <img src="http://placekitten.com/g/768/400"/>
+          <img src="https://placekitten.com/g/768/400"/>
           <figcaption>Fig1. - The Pulpit Rock, Norway.</figcaption>
         </figure> 
         <h2>Nick Hulea</h2>
@@ -17,7 +17,7 @@
       </section>
       <aside>
         <figure>
-          <img src="http://placekitten.com/g/768/500"/>
+          <img src="https://placekitten.com/g/768/500"/>
           <figcaption>Fig1. - The Pulpit Rock, Norway.</figcaption>
         </figure> 
         <p>Turkey chicken pancetta sirloin spare ribs pig, beef ribs drumstick biltong tri-tip jerky pork loin. </p>
@@ -37,7 +37,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "bourbon";
 @import "neat";
 
