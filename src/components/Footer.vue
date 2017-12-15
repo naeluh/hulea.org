@@ -1,15 +1,14 @@
 <template>
 <footer>
 	<div>
-		<p>Posted by: Hege Refsnes</p>
-		<p>Contact information: <a href="mailto:someone@example.com">someone@example.com</a>.</p>
+    <p>A. I. Winter</p>
+    <p>Contact: <a target="_blank" title="Contact" alt="Contact" href="mailto:aiwinter@gmail.com">aiwinter@gmail.com</a>.</p>
+    <p>Github: <a target="_blank" title="Github" alt="Github" href="https://github.com/aiwinter">https://github.com/aiwinter</a></p>
+    <p> <a target="_blank" title="About" alt="About" href="/about">About</a>.</p>
+    <p> <a target="_blank" title="Help" alt="Help" href="/help">Help</a>.</p>
 	</div>
-	<div>
-		
-	</div>
-	<div>
-		
-	</div>
+	<div></div>
+	<div></div>
 </footer>
 </template>
 

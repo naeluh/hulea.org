@@ -14,19 +14,8 @@ export default {
       arr: []
     }
   },
-  methods: {
-    get (params) {
-      console.log(this.$route)
-      const uri = this.$route.params.id
-      return axios.get(`https://nhm.org/nature/map/map/searchobservations?params[project_id]=` + uri)
-      .then((res) => {
-        this.arr = res.data
-      })
-    }
-  },
-  created () {
-    this.get()
-  }
+  methods: {},
+  created () {}
 }
 </script>
 
