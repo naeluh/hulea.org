@@ -1,16 +1,15 @@
 <template>
-  <div class="hello">
-    <div>User {{ $route.params.id }}</div>
-    <ul v-for="a in arr">
-    <li>
-      <span>{{a.id}}</span>
-    </li>
-    </ul>
+  <div>
+    <div> 
+    </div>
+    <div id="wrap">
+      <div id="block">
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import axios from 'axios'
 
 export default {
   name: 'Index',
@@ -19,47 +18,42 @@ export default {
       arr: []
     }
   },
+  computed: {},
   methods: {
-    get (params) {
-      console.log(this.$route)
-      const uri = this.$route.params.id
-      return axios.get(`https://nhm.org/nature/map/map/searchobservations?params[project_id]=` + uri)
-      .then((res) => {
-        this.arr = res.data
-      })
+    getRandomArbitrary: function (min, max) {
+      return Math.random() * (max - min) + min
+    },
+    color: function () {
+      return '#' + Math.random().toString(16).slice(2, 8).toUpperCase()
+    },
+    block: function (ele) {
+      const e = document.getElementById(ele)
+      const r = this.getRandomArbitrary(1.3432, 70.6546)
+      e.style.transform = 'rotate3d(1, 1, 1, ' + r + 'deg)'
+      e.style.webkitTransform = 'rotate3d(1, 1, 1, ' + r + 'deg)'
+      e.style.backgroundColor = this.color()
     }
   },
-  created () {
-    this.get()
+  mounted () {
+    this.block('block')
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.hello {
-  div {
-    color:red;
+@import "../assets/scss/main";
+div {
+  overflow: hidden;
+  #wrap {
+    #block {
+
+    }
   }
 }
+
 </style>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
-}
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
 </style>
