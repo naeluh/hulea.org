@@ -1,6 +1,6 @@
 <template>
   <div>
-    <article class="background-content" v-for="(value, key, index) in this.data.arr" v-if="value.url === $route.params.id">
+    <article class="background-content" v-for="(value, key, index) in this.arr" v-if="value.url === $route.params.id">
         <section class="offset60">
             <h1 contenteditable="false" id="title"></h1>
         </section>
@@ -23,6 +23,7 @@ import work from '../assets/data/work.json'
 
 export default {
   name: 'Pages',
+  props: ['arr'],
   data () {
     return {
       data: {
