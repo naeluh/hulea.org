@@ -9,7 +9,8 @@ const state = {
   transitioning_in: false,
   transitioning_out: false,
   loaded: true,
-  index: null
+  index: null,
+  nav: true
 }
 
 const mutations = {
@@ -31,6 +32,12 @@ const mutations = {
   SET_TRANSITIONING_OUT (state, transitioning) {
     state.transitioning_out = transitioning
     return state
+  },
+  CLOSE_NAV (state) {
+    state.nav = false
+  },
+  OPEN_NAV (state) {
+    state.nav = true
   }
 }
 

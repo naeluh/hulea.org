@@ -11,6 +11,14 @@ Vue.component('icon', Icon)
 Vue.component('Nav', Nav)
 Vue.config.productionTip = false
 require('./assets/scss/main.scss')
+require('../node_modules/basscss-typography/index.css')
+require('../node_modules/basscss-typography/css/typography.css')
+require('../node_modules/basscss-type-scale/index.css')
+require('../node_modules/basscss-type-scale/css/type-scale.css')
+require('../node_modules/basscss-padding/index.css')
+require('../node_modules/basscss-padding/css/padding.css')
+require('../node_modules/basscss-margin/index.css')
+require('../node_modules/basscss-margin/css/margin.css')
 
 /* eslint-disable no-new */
 new Vue({

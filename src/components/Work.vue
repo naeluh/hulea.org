@@ -12,10 +12,17 @@
 </template>
 
 <script>
+import store from '../store'
 
 export default {
   name: 'Work',
   props: ['arr'],
+  beforeRouteEnter (to, from, next) {
+    store.commit(
+      store.state.nav ? 'CLOSE_NAV' : 'OPEN_NAV'
+    )
+    next()
+  },
   methods: {},
   computed: {},
   mounted () {}

@@ -2,11 +2,11 @@
   <div>
 <div class="content-wrapper">
   <div class="columns is-mobile is-centered">
-    <div class="column">
-        <h1 class="title">Welcome !</h1>
+    <div class="column p2">
+        <h1 class="h1">Welcome !</h1>
         <p>Hello you have arrived at the website of Nick Hulea !</p>
-        <p>Samples of my work can be found <a href="work" title="work" alt="work" target="_blank">here .</a></p>
-        <p>If you would like to contact me or if you have any questions click <a href="contact" title="contact" alt="contact" target="_blank">here .</a>
+        <p>Samples of my work can be found <router-link to="work" title="work" alt="work">here .</router-link></p>
+        <p>If you would like to contact me or if you have any questions click  <router-link to="contact" title="contact" alt="contact">here .</router-link>
         </p>
     </div>
   </div>
@@ -19,6 +19,7 @@
 </template>
 
 <script>
+import store from '../store'
 
 export default {
   name: 'Index',
@@ -38,6 +39,12 @@ export default {
       e.style.backgroundColor = this.color()
     }
   },
+  beforeRouteEnter (to, from, next) {
+    store.commit(
+      store.state.nav ? 'CLOSE_NAV' : 'OPEN_NAV'
+    )
+    next()
+  },
   mounted () {
     this.block('block')
   }
@@ -52,6 +59,7 @@ div {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 1;
   }
   overflow: hidden;
   #wrap {
