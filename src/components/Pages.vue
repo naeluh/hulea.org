@@ -19,18 +19,10 @@
 </template>
 
 <script>
-import work from '../assets/data/work.json'
 
 export default {
   name: 'Pages',
   props: ['arr'],
-  data () {
-    return {
-      data: {
-        arr: work
-      }
-    }
-  },
   methods: {
     getUrl (id) {
       id = id += 1

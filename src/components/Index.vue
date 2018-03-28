@@ -1,7 +1,16 @@
 <template>
   <div>
-    <div> 
+<div class="content-wrapper">
+  <div class="columns is-mobile is-centered">
+    <div class="column">
+        <h1 class="title">Welcome !</h1>
+        <p>Hello you have arrived at the website of Nick Hulea !</p>
+        <p>Samples of my work can be found <a href="work" title="work" alt="work" target="_blank">here .</a></p>
+        <p>If you would like to contact me or if you have any questions click <a href="contact" title="contact" alt="contact" target="_blank">here .</a>
+        </p>
     </div>
+  </div>
+</div>
     <div id="wrap">
       <div id="block">
       </div>
@@ -13,12 +22,7 @@
 
 export default {
   name: 'Index',
-  data () {
-    return {
-      arr: []
-    }
-  },
-  computed: {},
+  props: ['arr'],
   methods: {
     getRandomArbitrary: function (min, max) {
       return Math.random() * (max - min) + min
@@ -41,8 +45,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/scss/main";
 div {
+  position:relative;
+  .content-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
   overflow: hidden;
   #wrap {
     #block {

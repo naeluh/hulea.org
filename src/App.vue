@@ -22,7 +22,6 @@ export default {
 </style>
 
 <style lang="scss" scoped>
-@import "./assets/scss/main";
 #load-component {
   position: fixed;
   height: 100vh;
