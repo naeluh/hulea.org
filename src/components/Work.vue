@@ -13,17 +13,11 @@
 </template>
 
 <script>
-import store from '../store'
+// import store from '../store'
 
 export default {
   name: 'Work',
   props: ['arr'],
-  beforeRouteLeave (to, from, next) {
-    store.commit(
-      store.state.nav = 'CLOSE_NAV'
-    )
-    next()
-  },
   methods: {},
   computed: {},
   mounted () {}

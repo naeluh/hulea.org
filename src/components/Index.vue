@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import store from '../store'
+// import store from '../store'
 
 export default {
   name: 'Index',
@@ -38,12 +38,6 @@ export default {
       e.style.webkitTransform = 'rotate3d(1, 1, 1, ' + r + 'deg)'
       e.style.backgroundColor = this.color()
     }
-  },
-  beforeRouteLeave (to, from, next) {
-    store.commit(
-      store.state.nav = 'CLOSE_NAV'
-    )
-    next()
   },
   mounted () {
     this.block('block')

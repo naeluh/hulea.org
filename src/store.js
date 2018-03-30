@@ -34,10 +34,10 @@ const mutations = {
     return state
   },
   CLOSE_NAV (state) {
-    state.nav = false
+    state.nav = true
   },
   OPEN_NAV (state) {
-    state.nav = true
+    state.nav = false
   }
 }
 

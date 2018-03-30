@@ -1,5 +1,5 @@
 <template>
-    <div v-bind:class="{ 'hide-overlay': !this.$store.state.nav }">
+    <div v-bind:class="{ 'hide-overlay': this.$store.state.nav }">
       <nav>
           <ul>
             <li v-on:click="showNav()" class="list one"></li>
@@ -9,7 +9,11 @@
           <div class="overlay-content">
               <div id="close" v-on:click="showNav()"><span>close</span></div>
               <ul id="weblist">
-              	<li style="background-color: rgb(17, 17, 17);" v-for="(value, key, index) in this.data.arr" v-bind:data="key"><router-link :to="value.link" :key="index"><p>{{value.title}}</p></router-link></li>
+              	<li style="background-color: rgb(17, 17, 17);" v-for="(value, key, index) in this.data.arr" v-bind:data="key">
+                  <router-link :to="value.link" :key="index" v-on:click.native="showNav()">
+                    <p>{{value.title}}</p>
+                  </router-link>
+                </li>
               </ul>
           </div>
       </div>
@@ -18,7 +22,7 @@
 
 <script>
 import navItems from '../assets/data/nav.json'
-import store from '../store'
+// import store from '../store'
 
 export default {
   name: 'Nav',
@@ -30,19 +34,14 @@ export default {
       }
     }
   },
-  beforeRouteLeave (to, from, next) {
-    store.commit(
-      store.state.nav = 'CLOSE_NAV'
-    )
-    next()
-  },
   methods: {
     toggleClass () {
       this.data.isActive = !this.data.isActive
     },
     showNav () {
+      console.log('showNav')
       this.$store.commit(
-        this.$store.state.nav ? 'CLOSE_NAV' : 'OPEN_NAV'
+        this.$store.state.nav ? 'OPEN_NAV' : 'CLOSE_NAV'
       )
     }
   }

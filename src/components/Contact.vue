@@ -6,16 +6,16 @@
                     <label for="name">Name:</label>
                     <!-- v-model link to the model (i.e. pieces of the data section of vue.js) -->
                     <!-- v-on lets us run methods from vue.js : this one is v-on:blur for the blur event -->
-                    <!--    blur just means that the field no longer has 'focus' -->
-                    <input v-model="name" v-on:blur="isValidName" class="form-control" name="name" type="text" />
+                    <!-- blur just means that the field no longer has 'focus' -->
+                    <input v-model="name" v-on:blur="isValidName" class="form-control" name="name" type="name" required/>
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input v-model="email" v-on:blur="isValidEmail" class="form-control" name="email" type="email" />
+                    <input v-model="email" v-on:blur="isValidEmail" class="form-control" name="email" type="email" required/>
                 </div>
                 <div class="form-group">
                     <label for="message">Message (<span>{{ message.length }}</span> / <span>{{ maxLength }}</span>)</label>
-                    <textarea v-model="message" v-on:blur="isValidMessage" class="form-control" name="message"></textarea>
+                    <textarea v-model="message" v-on:blur="isValidMessage" class="form-control" name="message" required></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Send</button>
             </form>
@@ -25,6 +25,7 @@
 
 <script>
 import store from '../store'
+import axios from 'axios'
 
 export default {
   name: 'Contact',
@@ -62,18 +63,28 @@ export default {
       // are invalid and display message
       // TODO submit to form processor
       console.log('submitting message...')
-      this.$http({
-        url: '/someUrl',
+      axios({
         method: 'POST',
+        url: 'https://hulea.org/contact-form.php',
         data: {
           name: this.name,
           email: this.email,
           message: this.message
-        }}).then(function () {
-          alert('Your form was submitted!')
-        }, function () {
-          alert('Form submission failed')
-        })
+        },
+        config: {
+          headers: {
+            'Content-Type': 'multipart/form-data'
+          }
+        }
+      })
+      .then(function (response) {
+        // handle success
+        console.log(response)
+      })
+      .catch(function (response) {
+        // handle error
+        console.log(response)
+      })
     }
   },
   beforeRouteLeave (to, from, next) {
