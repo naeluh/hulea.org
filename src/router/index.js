@@ -4,6 +4,7 @@ import { AsyncDataPlugin } from 'vue-async-data-2'
 import Index from '@/components/Index'
 import Pages from '@/components/Pages'
 import Work from '@/components/Work'
+import Contact from '@/components/Contact'
 
 Vue.use(AsyncDataPlugin)
 Vue.use(Router)
@@ -25,6 +26,11 @@ export default new Router({
     path: '/work/',
     name: 'Work',
     component: Work
+  },
+  {
+    path: '/contact/',
+    name: 'Contact',
+    component: Contact
   }
   ]
 })

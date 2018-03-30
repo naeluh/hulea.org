@@ -39,9 +39,9 @@ export default {
       e.style.backgroundColor = this.color()
     }
   },
-  beforeRouteEnter (to, from, next) {
+  beforeRouteLeave (to, from, next) {
     store.commit(
-      store.state.nav ? 'CLOSE_NAV' : 'OPEN_NAV'
+      store.state.nav = 'CLOSE_NAV'
     )
     next()
   },

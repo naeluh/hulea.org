@@ -6,9 +6,11 @@ import router from './router'
 import 'vue-awesome/icons'
 import Icon from 'vue-awesome/components/Icon'
 import Nav from './components/Nav'
+import Contact from './components/Contact'
 import store from './store'
 Vue.component('icon', Icon)
 Vue.component('Nav', Nav)
+Vue.component('Contact', Contact)
 Vue.config.productionTip = false
 require('./assets/scss/main.scss')
 require('../node_modules/basscss-typography/index.css')

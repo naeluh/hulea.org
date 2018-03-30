@@ -30,11 +30,11 @@ export default {
       }
     }
   },
-  beforeRouteEnter (to, from, next) {
-    console.log('here')
+  beforeRouteLeave (to, from, next) {
     store.commit(
-      store.state.nav ? 'CLOSE_NAV' : 'OPEN_NAV'
+      store.state.nav = 'CLOSE_NAV'
     )
+    next()
   },
   methods: {
     toggleClass () {

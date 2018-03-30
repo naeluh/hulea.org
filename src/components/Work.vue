@@ -5,6 +5,7 @@
             <h1>{{value.title}}</h1>
         </section>
         <section class="offset0">
+
             <div id="image" class="imgHero" :style="{ backgroundImage: 'url( https://data.aiwinter.org/' +   value.field_image  + ')' }"></div>
         </section>
     </article>
@@ -17,9 +18,9 @@ import store from '../store'
 export default {
   name: 'Work',
   props: ['arr'],
-  beforeRouteEnter (to, from, next) {
+  beforeRouteLeave (to, from, next) {
     store.commit(
-      store.state.nav ? 'CLOSE_NAV' : 'OPEN_NAV'
+      store.state.nav = 'CLOSE_NAV'
     )
     next()
   },
