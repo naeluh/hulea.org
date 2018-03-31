@@ -1,18 +1,18 @@
 <template>
   <div>
-    <article class="background-content" v-for="(value, key, index) in this.arr" v-if="value.url === $route.params.id">
+    <article class="background-content" v-for="(value, key, index) in this.arr" v-if="value.field_url === $route.params.id">
         <section class="offset60">
-            <h1 contenteditable="false" id="title"></h1>
+            <h1 class="h1">{{value.title}}</h1>
         </section>
         <section class="offset0">
-            <div id="image" class="imgHero" v-bind:style="{ backgroundImage: 'url(' + /* require('@/assets/' + value.img) */ + ')' }"></div>
+            <div class="imgHero" :style="{ backgroundImage: 'url( https://data.aiwinter.org/' +   value.field_image  + ')' }"></div>
         </section>
         <section class="offset60_2">
-            <h3><a contenteditable="false" id="link" target="_blank" v-bind:href="value.link"></a></h3>
-            <p id="description" contenteditable="false" v-html="value.siteInfo"></p>
+            <h3 v-html="value.field_link"></h3>
+            <p id="description" v-html="value.body"></p>
         </section>
         <section class="offset40">
-            <a id="next" class="next"  v-bind:href="'/pages/' + getUrl(key)"><i class="fa fa-arrow-right" aria-hidden="true"><icon name="arrow-right" scale="3"></icon></i></a>
+            <router-link class="next" :to="'/work/' + getUrl(key)"><i class="fa fa-arrow-right" aria-hidden="true"><icon name="arrow-right" scale="3"></icon></i></router-link>
         </section>
     </article>
   </div>
@@ -25,13 +25,14 @@ export default {
   props: ['arr'],
   methods: {
     getUrl (id) {
+      console.log(id)
       id = id += 1
-      if (id >= this.data.arr.length) {
+      if (id >= this.arr.length) {
         id = 0
       }
-      for (var i = this.data.arr.length - 1; i >= 0; i--) {
-        if (id === Number(this.data.arr[i].id)) {
-          return this.data.arr[i].url
+      for (var i = this.arr.length - 1; i >= 0; i--) {
+        if (id === Number(this.arr[i].id)) {
+          return this.arr[i].field_url
         }
       }
     }

@@ -1,5 +1,8 @@
 <template>
     <article class="background-content">
+         <section class="offset0">
+            <h1 class="h1">Contact</h1>
+        </section>
         <section class="offset0">
             <form id="contact_form" v-on:submit.prevent="submitForm" action="">
                 <div class="form-group">
@@ -24,7 +27,7 @@
 </template>
 
 <script>
-import store from '../store'
+// import store from '../store'
 import axios from 'axios'
 
 export default {
@@ -86,12 +89,6 @@ export default {
         console.log(response)
       })
     }
-  },
-  beforeRouteLeave (to, from, next) {
-    store.commit(
-      store.state.nav = 'CLOSE_NAV'
-    )
-    next()
   },
   mounted () {
 

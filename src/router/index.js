@@ -5,6 +5,7 @@ import Index from '@/components/Index'
 import Pages from '@/components/Pages'
 import Work from '@/components/Work'
 import Contact from '@/components/Contact'
+import About from '@/components/About'
 
 Vue.use(AsyncDataPlugin)
 Vue.use(Router)
@@ -18,7 +19,7 @@ export default new Router({
     component: Index
   },
   {
-    path: '/pages/:id',
+    path: '/work/:id',
     name: 'Pages',
     component: Pages
   },
@@ -31,6 +32,11 @@ export default new Router({
     path: '/contact/',
     name: 'Contact',
     component: Contact
+  },
+  {
+    path: '/about/',
+    name: 'About',
+    component: About
   }
   ]
 })

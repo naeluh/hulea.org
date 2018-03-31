@@ -49,7 +49,11 @@ const actions = {
       .get(url)
       .then(function (response) {
         let data = response.data
-        console.log(data)
+
+        for (var i = data.length - 1; i >= 0; i--) {
+          data[i]['id'] = i
+        }
+
         context.commit('REPLACE_QUERYDATA', data)
         context.commit('SET_LOADED', true)
         return response.data
