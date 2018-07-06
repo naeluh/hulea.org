@@ -1,11 +1,11 @@
 <template>
 <footer>
 	<div>
-    <p style="font-weight:900;margin-bottom:1rem;">A. I. Winter</p>
-    <p>Contact: <a target="_blank" title="Contact" alt="Contact" href="mailto:aiwinter@gmail.com">aiwinter@gmail.com</a></p>
-    <p>Github: <a target="_blank" title="Github" alt="Github" href="https://github.com/aiwinter">https://github.com/aiwinter</a></p>
+    <p style="font-weight:900;margin-bottom:1rem;">Kristin Friedrich</p>
+    <p>Contact: <a target="_blank" title="Contact" alt="Contact" href="mailto:kfriedrich990@gmail.com">kfriedrich990@gmail.com</a></p>
     <p> <a target="_blank" title="About" alt="About" href="/about">About</a></p>
-    <p> <a target="_blank" title="Help" alt="Help" href="/help">Help</a></p>
+    <p> <a target="_blank" title="resume" alt="resume" href="/resume">Resume</a></p>
+    <p> <a target="_blank" title="writing" alt="writing" href="/writing">Writing</a></p>
 	</div>
 	<div></div>
 </footer>
@@ -37,7 +37,6 @@ $inner--grid: (
   gutter: 2rem,
 );
 
-
 $grid--tablet: (
   columns: 12,
   gutter: 2rem,
@@ -56,7 +55,7 @@ footer {
     line-height: 150%;
 	}
 
-	background-color: #000;
+	background-color:green;
 
     @include grid-container;
 

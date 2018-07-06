@@ -16,5 +16,7 @@ export default {
 </style>
 
 <style lang="scss">
-	
+	html {
+    color: green;
+  }
 </style>

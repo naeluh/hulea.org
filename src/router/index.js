@@ -2,7 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import { AsyncDataPlugin } from 'vue-async-data-2'
 import Index from '@/components/Index'
-import Help from '@/components/Help'
+import Writing from '@/components/Writing'
+import Resume from '@/components/Resume'
 import About from '@/components/About'
 
 Vue.use(AsyncDataPlugin)
@@ -17,9 +18,14 @@ export default new Router({
     component: Index
   },
   {
-    path: '/help',
-    name: 'Help',
-    component: Help
+    path: '/Resume',
+    name: 'Resume',
+    component: Resume
+  },
+  {
+    path: '/writing',
+    name: 'Writing',
+    component: Writing
   },
   {
     path: '/about',

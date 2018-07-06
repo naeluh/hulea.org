@@ -1,6 +1,6 @@
 <template>
   <main class="container" role="main">
-    <article><section><h1>  [{A.I. Winter}] </h1></section></article>
+    <article><section><h1>Kristin Friedrich</h1></section></article>
   </main>
 </template>
 
@@ -32,7 +32,6 @@ $inner--grid: (
   gutter: 2rem,
 );
 
-
 $grid--tablet: (
   columns: 12,
   gutter: 2rem,
@@ -47,6 +46,7 @@ $grid--phone: (
 
 .container {
     @include grid-container;
+    color: green;
 
     article {
         position: relative;
@@ -64,7 +64,6 @@ $grid--phone: (
             right: 0;
 
             h1 {
-                border: 12px solid;
                 padding: 48px;
                 padding: 40px 0;
                 font-weight: 900;

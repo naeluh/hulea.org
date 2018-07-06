@@ -6,13 +6,12 @@
          <figure>
           <img src="https://placekitten.com/g/1024/500"/>
         </figure> 
-        <h2>Jack Bangerter</h2>
+        <h2>Kristin Friedrich</h2>
         <p>Turkey chicken pancetta sirloin spare ribs pig, beef ribs drumstick biltong tri-tip jerky pork loin. Spare ribs brisket buffalo tenderloin flank pancetta kielbasa, frankfurter alcatra boudin turducken. Corned beef ground round bresaola pastrami, pork ribeye capicola bacon kielbasa.</p>
         <figure>
           <img src="https://placekitten.com/g/768/400"/>
           <figcaption>Fig1. - The Pulpit Rock, Norway.</figcaption>
         </figure> 
-        <h2>Nick Hulea</h2>
         <p>Turkey chicken pancetta sirloin spare ribs pig, beef ribs drumstick biltong tri-tip jerky pork loin. Spare ribs brisket buffalo tenderloin flank pancetta kielbasa, frankfurter alcatra boudin turducken. Corned beef ground round bresaola pastrami, pork ribeye capicola bacon kielbasa.</p>
       </section>
       <aside>

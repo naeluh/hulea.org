@@ -1,6 +1,6 @@
 [
    {
-      "title":"aiwinter",
+      "title":"Kristin Friedrich",
       "link":"/"
    },
    {
@@ -8,7 +8,11 @@
       "link":"/about"
    },
    {
-      "title":"Help Us Out",
-      "link":"/help"
+      "title":"Resume",
+      "link":"/resume"
+   },
+   {
+    "title":"Writing",
+    "link":"/writing"
    }
 ]
