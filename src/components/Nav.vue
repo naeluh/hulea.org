@@ -11,7 +11,8 @@
           <div class="overlay-content">
               <div id="close" v-on:click="toggleClass()"><span>close</span></div>
               <ul id="weblist">
-              	<li style="background-color: rgb(17, 17, 17);height:33%;" v-for="(value, key, index) in this.data.arr" v-bind:data="key"><a v-bind:href="value.link"><p>{{value.title}}</p></a></li>
+              	<li style="background-color: rgb(17, 17, 17);height:33%;" v-for="(value, key) in this.data.arr" v-bind:key="key">
+                <a v-bind:href="value.link"><p>{{value.title}}</p></a></li>
               </ul>
           </div>
       </div>

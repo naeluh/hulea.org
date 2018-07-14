@@ -1,22 +1,43 @@
 <template>
   <main class="container" role="main">
-    <header><h1>About</h1></header>
     <article>
+
       <section>
+        <h1 class="heading">Kristin Friedrich</h1>
+      </section>
+
+      <section class="full-width">
          <figure>
-          <img src="https://placekitten.com/g/1024/500"/>
+          <img :src="require('@/assets/cat_1.jpeg')"/>
         </figure> 
         <h2>Kristin Friedrich</h2>
         <p>Turkey chicken pancetta sirloin spare ribs pig, beef ribs drumstick biltong tri-tip jerky pork loin. Spare ribs brisket buffalo tenderloin flank pancetta kielbasa, frankfurter alcatra boudin turducken. Corned beef ground round bresaola pastrami, pork ribeye capicola bacon kielbasa.</p>
         <figure>
-          <img src="https://placekitten.com/g/768/400"/>
+            <img :src="require('@/assets/cat_2.jpeg')"/>
+          <figcaption>Fig1. - The Pulpit Rock, Norway.</figcaption>
+        </figure> 
+        <p>Turkey chicken pancetta sirloin spare ribs pig, beef ribs drumstick biltong tri-tip jerky pork loin. Spare ribs brisket buffalo tenderloin flank pancetta kielbasa, frankfurter alcatra boudin turducken. Corned beef ground round bresaola pastrami, pork ribeye capicola bacon kielbasa.</p>
+      </section>
+
+      <section class="full-width">
+        <iframe :src="require('@/assets/friedrich_k_resume.pdf')" frameborder="0"></iframe>
+      </section>
+
+      <section>
+         <figure>
+          <img :src="require('@/assets/cat_1.jpeg')"/>
+        </figure> 
+        <h2>Kristin Friedrich</h2>
+        <p>Turkey chicken pancetta sirloin spare ribs pig, beef ribs drumstick biltong tri-tip jerky pork loin. Spare ribs brisket buffalo tenderloin flank pancetta kielbasa, frankfurter alcatra boudin turducken. Corned beef ground round bresaola pastrami, pork ribeye capicola bacon kielbasa.</p>
+        <figure>
+            <img :src="require('@/assets/cat_2.jpeg')"/>
           <figcaption>Fig1. - The Pulpit Rock, Norway.</figcaption>
         </figure> 
         <p>Turkey chicken pancetta sirloin spare ribs pig, beef ribs drumstick biltong tri-tip jerky pork loin. Spare ribs brisket buffalo tenderloin flank pancetta kielbasa, frankfurter alcatra boudin turducken. Corned beef ground round bresaola pastrami, pork ribeye capicola bacon kielbasa.</p>
       </section>
       <aside>
         <figure>
-          <img src="https://placekitten.com/g/768/500"/>
+            <img :src="require('@/assets/cat_3.jpeg')"/>
           <figcaption>Fig1. - The Pulpit Rock, Norway.</figcaption>
         </figure> 
         <p>Turkey chicken pancetta sirloin spare ribs pig, beef ribs drumstick biltong tri-tip jerky pork loin. </p>
@@ -62,6 +83,11 @@ $grid--phone: (
   media: "(max-width: 414px)",
 );
 
+.heading {
+  margin: 2rem 0;
+  font-size: 2rem;
+}
+
 img {
   width:100%;
   height:auto;
@@ -100,6 +126,22 @@ main {
     section {
 
       @include grid-column(8, $grid);
+
+      @include grid-media($grid--tablet) {
+        @include grid-column(12);
+      }
+    
+    }
+
+     .full-width {
+
+      iframe {
+        width: 100%;
+        margin: 2rem 0;
+        height: 55vh;
+      } 
+
+      @include grid-column(12, $grid);
 
       @include grid-media($grid--tablet) {
         @include grid-column(12);
