@@ -1,7 +1,7 @@
 @import "bourbon";
 @import "neat";
 @import "./fonts/stylesheet";
-@import "/node_modules/basscss/css/basscss.min.css";
+//@import "./node_modules/basscss/css/basscss.min.css";
 
 .container {
     margin-right: auto;
@@ -118,18 +118,18 @@ section {
     h1 {
         font-size: 150%;
         font-weight: bolder;
-        margin-bottom: 20px;
+        /* margin-bottom: 20px; */
     }
 
     h2 {
         font-size: 125%;
         font-weight: bolder;
-        margin-bottom: 20px;
+        /* margin-bottom: 20px; */
     }
 
     h3 {
         font-weight: bolder;
-        margin-bottom: 20px;
+        /* margin-bottom: 20px; */
     }
 }
 

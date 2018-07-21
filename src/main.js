@@ -22,6 +22,7 @@ Vue.component('icon', Icon)
 Vue.component('Footer', Footer)
 Vue.component('About', About)
 Vue.config.productionTip = false
+require('../node_modules/basscss/css/basscss.min.css')
 require('./assets/scss/main.scss')
 /* eslint-disable no-new */
 new Vue({

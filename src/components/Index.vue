@@ -1,10 +1,5 @@
 <template>
-  <main class="container" role="main">
-    <article>
-      <section><h1>Kristin Friedrich</h1></section>
-      <About></About>
-      </article>
-  </main>
+<About></About>
 </template>
 
 <script>
