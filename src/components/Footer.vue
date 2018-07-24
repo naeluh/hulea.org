@@ -1,11 +1,11 @@
 <template>
 <footer>
 	<div>
-    <p style="font-weight:900;margin-bottom:1rem;">Kristin Friedrich</p>
-    <p>Contact: <a target="_blank" title="Contact" alt="Contact" href="mailto:kfriedrich990@gmail.com">kfriedrich990@gmail.com</a></p>
-    <p> <a target="_blank" title="About" alt="About" href="/about">About</a></p>
-    <p> <a target="_blank" title="resume" alt="resume" href="/resume">Resume</a></p>
-    <p> <a target="_blank" title="writing" alt="writing" href="/writing">Writing</a></p>
+    <p class="bold mb1">Kristin Friedrich</p>
+    <p>CONTACT :  <a target="_blank" title="Contact" alt="Contact" href="mailto:kfriedrich990@gmail.com">kfriedrich990@gmail.com</a></p>
+    <p>LINKEDIN :  <a target="_blank" title="LINKEDIN" alt="LINKEDIN" href="https://www.linkedin.com/in/kristin-friedrich/">https://www.linkedin.com/in/kristin-friedrich/</a></p>
+ <!--   <p> <a target="_blank" title="resume" alt="resume" href="/resume">Resume</a></p>
+    <p> <a target="_blank" title="writing" alt="writing" href="/writing">Writing</a></p> -->
 	</div>
 	<div></div>
 </footer>

@@ -6,9 +6,17 @@
 .container {
     margin-right: auto;
     margin-left: auto;
+    max-width: 50rem;
+    position: relative;
+}
+
+.container-full-width {
+    margin-right: auto;
+    margin-left: auto;
     max-width: 88rem;
     position: relative;
 }
+
 
 * {
     box-sizing: border-box;
