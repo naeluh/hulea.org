@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import axios from 'axios'
+import data from './assets/data/work.json'
 
 Vue.use(Vuex)
 
@@ -43,11 +44,13 @@ const mutations = {
 
 const actions = {
   LOAD_DATA (context, payload) {
-    let url = 'https://data.aiwinter.org/json?_format=json'
+    // let url = 'https://data.aiwinter.org/json?_format=json'
     context.commit('SET_LOADED', false)
+    console.log(data)
     axios
-      .get(url)
+      .get(data)
       .then(function (response) {
+        console.log(response)
         let data = response.data
 
         for (var i = data.length - 1; i >= 0; i--) {
